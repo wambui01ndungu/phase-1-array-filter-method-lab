@@ -79,3 +79,16 @@ describe('index.js', function () {
     });
   });
 });
+
+function findMatching (driver,names){
+  return driver.filter(driver => driver.startsWith(letters));
+}
+
+function fuzzyMatch(drivers, letters){
+      return drivers.filter(driver => driver.startsWith(letters));
+}
+function matchName(drivers, name) {
+  return drivers.filter(driver => driver.name === name);
+}
+
+module.exports = { findMatching, fuzzyMatch, matchName };
